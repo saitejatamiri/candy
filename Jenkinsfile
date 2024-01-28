@@ -12,7 +12,7 @@ pipeline {
     stage ('Deploy') {
       steps {
         script {
-          deploy adapters: [tomcat9(credentialsId: 'tomcat_credential', path: '', url: 'http://localhost:8081/')], contextPath: '/pipeline1', onFailure: false, war: '**/*.war' 
+          deploy adapters: [tomcat9(credentialsId: 'tomcat_credential', path: '', url: 'http://localhost:8081/')], contextPath: '/pipeline2', onFailure: false, war: '**/*.war' 
         }
       }
     }
